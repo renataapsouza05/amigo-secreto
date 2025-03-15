@@ -38,6 +38,12 @@ function exibirListaDeNomes() {
     let indiceAleatorio = Math.floor(Math.random() * listaDeNomes.length);
     let amigoSorteado = listaDeNomes[indiceAleatorio];
 
+    // Remove o amigo sorteado da lista
+    listaDeNomes.splice(indiceAleatorio, 1);
+
     document.getElementById('resultado').innerHTML = `<p>Amigo sorteado: ${amigoSorteado}</p>`;
+
+    // Atualiza a lista de nomes exibida
+    exibirListaDeNomes();
  }
 
