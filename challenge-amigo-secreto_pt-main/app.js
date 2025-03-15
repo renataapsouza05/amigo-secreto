@@ -26,7 +26,18 @@ function exibirListaDeNomes() {
         let itemLista = document.createElement('li');
         itemLista.textContent = nome;
         lista.appendChild(itemLista);
+    }     
+ }
+
+ function sortearAmigo() {
+    if (listaDeNomes.length === 0) {
+        alert('Adicione amigos antes de sortear.');
+        return;
     }
-        
-    }
+
+    let indiceAleatorio = Math.floor(Math.random() * listaDeNomes.length);
+    let amigoSorteado = listaDeNomes[indiceAleatorio];
+
+    document.getElementById('resultado').innerHTML = `<p>Amigo sorteado: ${amigoSorteado}</p>`;
+ }
 
